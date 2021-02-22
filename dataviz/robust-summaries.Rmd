@@ -91,7 +91,7 @@ Keep in mind that this is not such an extreme event: if we have 1000 data points
 
 If we want an outlier to be rarer, we can increase the 1.5 to a larger number. Tukey also used 3 and called these _far out_ outliers. With a normal distribution, 
 `r r <- c(q1 - 3*iqr , q3 + 3*iqr); round((pnorm(r[2]) - pnorm(r[1]))*100, 4)`% 
-of the data falls in this interval. This translates into about 2 in a million chance of being outside the range. In the `geom_boxplot` function, this can be controlled by the `outlier.size` argument, which defaults to 1.5.
+of the data falls in this interval. This translates into about 2 in a million chance of being outside the range. In the `geom_boxplot` function, this can be controlled by the `coef` argument, which defaults to 1.5.
 
 The 180 inches measurement is well beyond the range of the height data:
 
